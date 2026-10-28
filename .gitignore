@@ -1,0 +1,6 @@
+node_modules/
+database/estoque.db
+database/estoque.db-shm
+database/estoque.db-wal
+.DS_Store
+.env

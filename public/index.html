@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estoque Fácil | Controle de estoque</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div>
+      <p class="sobretitulo">GESTÃO SIMPLES E ORGANIZADA</p>
+      <h1>Estoque Fácil</h1>
+      <p class="subtitulo">Sistema de controle de produtos e movimentações</p>
+    </div>
+    <span class="etiqueta">Projeto acadêmico</span>
+  </header>
+
+  <main class="container">
+    <section class="resumo" aria-label="Resumo do estoque">
+      <article class="cartao-resumo">
+        <span>Produtos cadastrados</span>
+        <strong id="totalProdutos">0</strong>
+      </article>
+      <article class="cartao-resumo">
+        <span>Unidades em estoque</span>
+        <strong id="totalUnidades">0</strong>
+      </article>
+      <article class="cartao-resumo alerta">
+        <span>Estoque baixo</span>
+        <strong id="totalBaixo">0</strong>
+      </article>
+    </section>
+
+    <section class="painel">
+      <div class="cabecalho-secao">
+        <div>
+          <h2>Cadastrar produto</h2>
+          <p>Preencha os dados para adicionar um produto ao estoque.</p>
+        </div>
+      </div>
+      <form id="formProduto" class="formulario">
+        <label>Código
+          <input id="codigo" name="codigo" required maxlength="40" placeholder="Ex.: MAT-001">
+        </label>
+        <label>Nome do produto
+          <input id="nome" name="nome" required maxlength="120" placeholder="Ex.: Papel A4">
+        </label>
+        <label>Categoria
+          <input id="categoria" name="categoria" maxlength="80" placeholder="Ex.: Escritório">
+        </label>
+        <label>Quantidade inicial
+          <input id="quantidade" name="quantidade" type="number" min="0" step="1" required value="0">
+        </label>
+        <label>Estoque mínimo
+          <input id="minimo" name="minimo" type="number" min="0" step="1" required value="5">
+        </label>
+        <button class="botao primario" type="submit">Cadastrar produto</button>
+      </form>
+      <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="painel">
+      <div class="cabecalho-secao linha">
+        <div>
+          <h2>Produtos</h2>
+          <p>Consulte, edite ou registre entradas e saídas.</p>
+        </div>
+        <input id="busca" class="busca" type="search" placeholder="Buscar por nome, código ou categoria" aria-label="Buscar produtos">
+      </div>
+      <div class="tabela-responsiva">
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th><th>Produto</th><th>Categoria</th><th>Quantidade</th><th>Status</th><th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="listaProdutos">
+            <tr><td colspan="6" class="vazio">Carregando produtos...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="painel">
+      <div class="cabecalho-secao">
+        <h2>Últimas movimentações</h2>
+        <p>Histórico das entradas e saídas registradas.</p>
+      </div>
+      <div class="tabela-responsiva">
+        <table>
+          <thead><tr><th>Data</th><th>Produto</th><th>Tipo</th><th>Quantidade</th><th>Observação</th></tr></thead>
+          <tbody id="listaMovimentacoes">
+            <tr><td colspan="5" class="vazio">Nenhuma movimentação registrada.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer>Estoque Fácil · Projeto de Desenvolvimento Web</footer>
+  </main>
+
+  <dialog id="dialogEdicao">
+    <form id="formEdicao" class="form-dialog">
+      <h2>Editar produto</h2>
+      <input id="edicaoId" type="hidden">
+      <label>Código<input id="edicaoCodigo" required></label>
+      <label>Nome<input id="edicaoNome" required></label>
+      <label>Categoria<input id="edicaoCategoria"></label>
+      <label>Quantidade atual<input id="edicaoQuantidade" type="number" min="0" step="1" required></label>
+      <label>Estoque mínimo<input id="edicaoMinimo" type="number" min="0" step="1" required></label>
+      <div class="acoes-dialog">
+        <button type="button" class="botao secundario" id="cancelarEdicao">Cancelar</button>
+        <button type="submit" class="botao primario">Salvar alterações</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
