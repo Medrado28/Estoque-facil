@@ -1,4 +1,3 @@
-HEAD
 # Estoque Fácil
 
 Sistema web acadêmico para controle de produtos, quantidades e movimentações de estoque.
@@ -65,4 +64,3 @@ Este projeto é uma versão inicial para fins acadêmicos. Antes de uso real por
 
 # Estoque-facil
 Projeto de sistema de controle de estoque desenvolvido para a disciplina de Desenvolvimento Web.
-
