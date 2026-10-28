@@ -1,3 +1,4 @@
+HEAD
 # Estoque Fácil
 
 Sistema web acadêmico para controle de produtos, quantidades e movimentações de estoque.
@@ -60,5 +61,8 @@ Na primeira execução, o sistema cria automaticamente o arquivo `database/estoq
 8. Cadastre outro produto com o mesmo código; o sistema deve rejeitar o duplicado.
 
 ## Observações
-
 Este projeto é uma versão inicial para fins acadêmicos. Antes de uso real por uma empresa, seriam necessários autenticação, autorização de usuários, cópias de segurança, auditoria e outras medidas de segurança.
+
+# Estoque-facil
+Projeto de sistema de controle de estoque desenvolvido para a disciplina de Desenvolvimento Web.
+
