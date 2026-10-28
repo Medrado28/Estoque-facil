@@ -64,5 +64,9 @@ Na primeira execução, o sistema deve criar automaticamente o banco de dados SQ
 8. Tente cadastrar outro produto com o mesmo código e confira se o sistema impede a duplicação.
 
 ## Observações
-
 Este projeto é uma versão inicial para fins acadêmicos. Antes de ser utilizado por uma empresa, precisará de medidas adicionais de segurança, como autenticação, controle de acesso, cópias de segurança e auditoria.
+=======
+Este projeto é uma versão inicial para fins acadêmicos. Antes de uso real por uma empresa, seriam necessários autenticação, autorização de usuários, cópias de segurança, auditoria e outras medidas de segurança.
+
+# Estoque-facil
+Projeto de sistema de controle de estoque desenvolvido para a disciplina de Desenvolvimento Web.
