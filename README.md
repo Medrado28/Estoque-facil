@@ -32,13 +32,13 @@ Instale uma versão LTS do Node.js pelo site oficial: https://nodejs.org/
 
 1. Abra a pasta `estoque-facil` no Visual Studio Code.
 2. No menu superior, clique em **Terminal > Novo Terminal**.
-3. Execute o comando:
+3. Execute o comando para instalar as dependências:
 
    ```bash
    npm install
    ```
 
-4. Quando a instalação terminar, execute:
+4. Quando a instalação terminar, inicie o sistema:
 
    ```bash
    npm start
